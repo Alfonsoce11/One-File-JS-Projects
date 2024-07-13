@@ -8,19 +8,23 @@
         <h1 id="currentTime"></h1>
         <script>
             "use strict"; // Makes the JS be executed in strict mode.
-            let d; // Declare the variable to make it global.
-            let h; // Declare the variable to make it global.
-            let m; // Declare the variable to make it global.
-            let s; // Declare the variable to make it global.
-            let ampm; // Declare the variable to make it global.
+            
+            // Declaring the variables to make them global
+            let d;
+            let h;
+            let m;
+            let s;
+            let ampm;
+            
             setInterval(function () { // sets an interval so that this code block executes every second.
                 d = new Date(); // sets d as the current date.
                 h = d.getHours(); // sets h as the current hour in a number from 1 to 23
-                if (h > 12) { // executes this code block if the current hour is more then 12.
+                
+                if (h > 12) { // executes this code block if the current hour is more than 12.
                     ampm = "PM"; // sets ampm to "PM".
                     d.setHours(h - 12); // sets the hour to the current hour minus 12 to make it a 12 format.
-                    h = d.getHours(); // updates the hours to get the hours in a 12 hour format.
-                } else { // executes this code block if the currant hour is not more then 12.
+                    h = d.getHours(); // updates the hours to get the hours in a 12-hour format.
+                } else { // executes this code block if the current hour is not more than 12.
                     ampm = "AM"; // Sets ampm to "AM".
                 }
                 m = d.getMinutes(); // sets m to the current minutes.
