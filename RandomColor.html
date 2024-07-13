@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Random Color</title>
+        <link rel="icon" type="image/x-icon" href="https://file.garden/ZXPZOz_dI1vYUjXR/IMG_2148.ico">
+        <style>
+            #heading {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body id="theHTML">
+            <h1 id="heading">Color Changing Background</h1>
+
+        <script>
+            let color = "#";
+            const characters = "0123456789abcdef";
+            let theCharacter;
+            let i = 0;
+            setInterval(function () {
+                while (i < 6) {
+                    theCharacter = characters[Math.floor(Math.random() * 16)];
+                    color += theCharacter;
+                    i++;
+                }
+                document.getElementById("theHTML").style.backgroundColor = color;
+                color = "#";
+                i = 0;
+            }, 500);
+        </script>
+    </body>
+</html>
